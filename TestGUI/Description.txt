@@ -1,0 +1,2 @@
+﻿A testGUI
+To just try the diffrent functions before adding the basic functions to the real GUI
