@@ -12,6 +12,8 @@ namespace Models
     public class Music
     {
         public int MusicId { get; set; }
+        public string BandName { get; set; }
+        public Band Band { get; set; }
         public string Titel { get; set; }
         public string Genre { get; set; }
         public int Year { get; set; }

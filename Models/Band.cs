@@ -17,5 +17,6 @@ namespace Models
         public string AddedBy { get; set; }
         public DateTime BandUpdated { get; set; }
         public string UpdatedBy { get; set; }
+        public ICollection<Music> Albums { get; set; }
     }
 }

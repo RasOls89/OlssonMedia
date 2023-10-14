@@ -21,5 +21,6 @@ namespace Models
         public string AddedBy { get; set; }
         public DateTime MovieUpdated { get; set; }
         public string UpdatedBy { get; set; }
+        public ICollection<Actor> Actors { get; set; }
     }
 }
