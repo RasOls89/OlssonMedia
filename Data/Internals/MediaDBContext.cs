@@ -20,6 +20,8 @@ namespace DataLayer.Internals
         public DbSet<Movie> Movies { get; set; }
         public DbSet<Album> Albums { get; set; }
         public DbSet<User> Users { get; set; }
+        public DbSet<Game> Games { get; set; }
+        
 
         protected override void OnModelCreating(ModelBuilder modelBuilder)
         {
@@ -33,12 +35,13 @@ namespace DataLayer.Internals
             modelBuilder.Entity<User>().Property(b => b.LastName);
             modelBuilder.Entity<User>().Property(b => b.FullName);
             modelBuilder.Entity<User>().Property(b => b.AcessRights);
-            modelBuilder.Entity<Actor>().Property(b => b.Added);
-            modelBuilder.Entity<Actor>().Property(b => b.AddedBy);
-            modelBuilder.Entity<Actor>().Property(b => b.Updated);
-            modelBuilder.Entity<Actor>().Property(b => b.UpdatedBy);
-            modelBuilder.Entity<Actor>().Property(b => b.ReasonForUpdating);
-          
+            modelBuilder.Entity<User>().Property(b => b.Added);
+            modelBuilder.Entity<User>().Property(b => b.AddedBy);
+            modelBuilder.Entity<User>().Property(b => b.Updated);
+            modelBuilder.Entity<User>().Property(b => b.UpdatedBy);
+            modelBuilder.Entity<User>().Property(b => b.ReasonForUpdating);
+            modelBuilder.Entity<User>().HasData(new User { UserId = 1, UserName = "Admin", Password = "SysAdmin1", FirstName = "John", LastName = "Doe", FullName = "John Doe", AcessRights = "Admin", Added = new DateTime(1989, 11, 22), AddedBy = "System", Updated = new DateTime(2019, 08, 17), UpdatedBy = "System", ReasonForUpdating = "Marrige" });
+
             modelBuilder.Entity<Actor>().HasKey(b => b.ActorId);
             modelBuilder.Entity<Actor>().Property(b => b.ActorId).ValueGeneratedOnAdd();
             modelBuilder.Entity<Actor>().Property(b => b.ActorName);

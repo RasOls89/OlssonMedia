@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace DataLayer
 {
-    internal interface IUnitofWork
+    public interface IUnitofWork : IDisposable
     {
     }
 }

@@ -14,9 +14,9 @@ namespace Models
         public ICollection<Movie> Movies { get; set; }
         public DateTime Added { get; set; }
         public string AddedBy { get; set; }
-        public DateTime Updated { get; set; }
-        public string UpdatedBy { get; set; }
-        public string ReasonForUpdating { get; set; }
-       
+        public DateTime? Updated { get; set; }
+        public string? UpdatedBy { get; set; }
+        public string? ReasonForUpdating { get; set; }
+        DateTime? IStatus.Updated { get; set; }
     }
 }

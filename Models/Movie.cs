@@ -24,6 +24,10 @@ namespace Models
         public DateTime Updated { get; set; }
         public string UpdatedBy { get; set; }
         public string ReasonForUpdating { get; set; }
-       
+        DateTime IStatus.Added { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        string IStatus.AddedBy { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        DateTime? IStatus.Updated { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        string? IStatus.UpdatedBy { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
+        string? IStatus.ReasonForUpdating { get => throw new NotImplementedException(); set => throw new NotImplementedException(); }
     }
 }

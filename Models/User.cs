@@ -5,7 +5,7 @@ using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
 
-namespace DataLayer.Internals
+namespace Models
 {
     public class User 
     {
@@ -18,9 +18,9 @@ namespace DataLayer.Internals
         public string AcessRights { get; set; }
         public DateTime Added { get; set; }
         public string AddedBy { get; set; }
-        public DateTime Updated { get; set; }
-        public string UpdatedBy { get; set; }
-        public string ReasonForUpdating { get; set; }
+        public DateTime? Updated { get; set; }
+        public string? UpdatedBy { get; set; }
+        public string? ReasonForUpdating { get; set; }
        
     }
 }
