@@ -17,7 +17,8 @@ namespace Models
         public string Genre { get; set; }
         public int Year { get; set; }
         public string Director { get; set; }
-        public ICollection<Actor> Actors { get; set; }
+        public string MainStar { get; set; }
+        //public ICollection<Actor> Actors { get; set; }
         public bool StillOwn { get; set; }
         public DateTime Added { get; set; }
         public string AddedBy { get; set; }

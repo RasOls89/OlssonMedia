@@ -2,7 +2,7 @@
 {
     public class Book : IStatus
     {
-        public int GameId { get; set; }
+        public int BookId { get; set; }
         public string FNAuthor { get; set; }
         public string ENAuthor { get; set; }
         public string FullNAuthor { get; set; }

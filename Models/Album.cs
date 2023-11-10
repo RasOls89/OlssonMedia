@@ -14,7 +14,7 @@ namespace Models
         public int AlbumId { get; set; }
         public string AlbumTitle { get; set; } 
         public string BandName { get; set; }
-        public Band Band { get; set; }
+        public string Band { get; set; }
         public string Titel { get; set; }
         public string Genre { get; set; }
         public int Year { get; set; }

@@ -42,24 +42,24 @@ namespace DataLayer.Internals
             modelBuilder.Entity<User>().Property(b => b.ReasonForUpdating);
             modelBuilder.Entity<User>().HasData(new User { UserId = 1, UserName = "Admin", Password = "SysAdmin1", FirstName = "John", LastName = "Doe", FullName = "John Doe", AcessRights = "Admin", Added = new DateTime(1989, 11, 22), AddedBy = "System", Updated = new DateTime(2019, 08, 17), UpdatedBy = "System", ReasonForUpdating = "Marrige" });
 
-            modelBuilder.Entity<Actor>().HasKey(b => b.ActorId);
-            modelBuilder.Entity<Actor>().Property(b => b.ActorId).ValueGeneratedOnAdd();
-            modelBuilder.Entity<Actor>().Property(b => b.ActorName);
-            modelBuilder.Entity<Actor>().Property(b => b.Sex);
-            modelBuilder.Entity<Actor>().Property(b => b.Movies);
-            modelBuilder.Entity<Actor>().Property(b => b.Added);
-            modelBuilder.Entity<Actor>().Property(b => b.AddedBy);
-            modelBuilder.Entity<Actor>().Property(b => b.Updated);
-            modelBuilder.Entity<Actor>().Property(b => b.UpdatedBy);
-            modelBuilder.Entity<Actor>().Property(b => b.ReasonForUpdating);
+            //modelBuilder.Entity<Actor>().HasKey(b => b.ActorId);
+            //modelBuilder.Entity<Actor>().Property(b => b.ActorId).ValueGeneratedOnAdd();
+            //modelBuilder.Entity<Actor>().Property(b => b.ActorName);
+            //modelBuilder.Entity<Actor>().Property(b => b.Sex);
+            //modelBuilder.Entity<Actor>().Property(b => b.Movies);
+            //modelBuilder.Entity<Actor>().Property(b => b.Added);
+            //modelBuilder.Entity<Actor>().Property(b => b.AddedBy);
+            //modelBuilder.Entity<Actor>().Property(b => b.Updated);
+            //modelBuilder.Entity<Actor>().Property(b => b.UpdatedBy);
+            //modelBuilder.Entity<Actor>().Property(b => b.ReasonForUpdating);
             ///Many-to-many
-            modelBuilder.Entity<Actor>().HasMany(b => b.Movies).WithMany(b => b.Actors);
+            //modelBuilder.Entity<Actor>().HasMany(b => b.Movies).WithMany(b => b.Actors);
 
             modelBuilder.Entity<Movie>().HasKey(b => b.MovieId);
             modelBuilder.Entity<Movie>().Property(b => b.MovieId).ValueGeneratedOnAdd();
             modelBuilder.Entity<Movie>().Property(b => b.MovieTitle);
             modelBuilder.Entity<Movie>().Property(b => b.Director);
-            modelBuilder.Entity<Movie>().Property(b => b.Actors);
+            //modelBuilder.Entity<Movie>().Property(b => b.Actors);
             modelBuilder.Entity<Movie>().Property(b => b.Genre);
             modelBuilder.Entity<Movie>().Property(b => b.StillOwn);
             modelBuilder.Entity<Movie>().Property(b => b.Added);
@@ -69,17 +69,17 @@ namespace DataLayer.Internals
             modelBuilder.Entity<Movie>().Property(b => b.ReasonForUpdating);
            
 
-            modelBuilder.Entity<Band>().HasKey(b => b.BandId);
-            modelBuilder.Entity<Band>().Property(b => b.BandId).ValueGeneratedOnAdd();
-            modelBuilder.Entity<Band>().Property(b => b.BandName);
-            modelBuilder.Entity<Band>().Property(b => b.Formed);
-            modelBuilder.Entity<Band>().Property(b => b.IsActive);
-            modelBuilder.Entity<Band>().Property(b => b.Albums);
-            modelBuilder.Entity<Band>().Property(b => b.Added);
-            modelBuilder.Entity<Band>().Property(b => b.AddedBy);
-            modelBuilder.Entity<Band>().Property(b => b.Updated);
-            modelBuilder.Entity<Band>().Property(b => b.UpdatedBy);
-            modelBuilder.Entity<Band>().Property(b => b.ReasonForUpdating);
+            //modelBuilder.Entity<Band>().HasKey(b => b.BandId);
+            //modelBuilder.Entity<Band>().Property(b => b.BandId).ValueGeneratedOnAdd();
+            //modelBuilder.Entity<Band>().Property(b => b.BandName);
+            //modelBuilder.Entity<Band>().Property(b => b.Formed);
+            //modelBuilder.Entity<Band>().Property(b => b.IsActive);
+            //modelBuilder.Entity<Band>().Property(b => b.Albums);
+            //modelBuilder.Entity<Band>().Property(b => b.Added);
+            //modelBuilder.Entity<Band>().Property(b => b.AddedBy);
+            //modelBuilder.Entity<Band>().Property(b => b.Updated);
+            //modelBuilder.Entity<Band>().Property(b => b.UpdatedBy);
+            //modelBuilder.Entity<Band>().Property(b => b.ReasonForUpdating);
          
 
             modelBuilder.Entity<Album>().HasKey(b => b.AlbumId);
@@ -95,7 +95,7 @@ namespace DataLayer.Internals
             modelBuilder.Entity<Album>().Property(b => b.Updated);
             modelBuilder.Entity<Album>().Property(b => b.UpdatedBy);
             modelBuilder.Entity<Album>().Property(b => b.ReasonForUpdating);
-            modelBuilder.Entity<Album>().HasOne<Band>(b => b.Band).WithMany(b => b.Albums).HasForeignKey(b => b.BandName);
+            //modelBuilder.Entity<Album>().HasOne<Band>(b => b.Band).WithMany(b => b.Albums).HasForeignKey(b => b.BandName);
 
            
         }

@@ -13,7 +13,7 @@ namespace Models
         public string BandName { get; set; }
         public int Formed { get; set; }
         public bool IsActive { get; set; }
-        public ICollection<Album> Albums { get; set; }
+        //publi ICollection<Album> Albums { get; set; }
         public DateTime Added { get; set; }
         public string AddedBy { get; set; }
         public DateTime Updated { get; set; }
